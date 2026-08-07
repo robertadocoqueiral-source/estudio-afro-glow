@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel ADM | Estúdio Afro Glow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="painel">
+
+<!-- BARRA LATERAL -->
+<aside class="sidebar">
+    <h2>Estúdio Afro Glow</h2>
+    <ul>
+        <li class="ativo" id="menuDashboard">🏠 Dashboard</li>
+        <li id="menuSv">💇 Serviços</li>
+        <li id="menuAg">📅 Agendamentos</li>
+        <li id="menuAvaliacoes">📝 Avaliações</li>
+        <li id="menuConfig">⚙️ Configurações</li>
+        <li id="botaoSair">🚪 Sair</li>
+    </ul>
+</aside>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="conteudo">
+
+    <!-- DASHBOARD -->
+    <div class="pagina ativa" id="paginaDashboard">
+        <h2>Dashboard</h2>
+        <div class="cards-dashboard">
+            <div class="card-dashboard">
+                <h3>Agendamentos</h3>
+                <span id="totalAg">0</span>
+            </div>
+            <div class="card-dashboard">
+                <h3>Serviços</h3>
+                <span id="totalSv">0</span>
+            </div>
+            <div class="card-dashboard">
+                <h3>Avaliações</h3>
+                <span id="totalAval">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVIÇOS -->
+    <div class="pagina" id="paginaSv">
+        <div class="cabecalho-pagina">
+            <h2>Gerenciar Serviços</h2>
+            <button id="btnNovoServico">+ Novo Serviço</button>
+        </div>
+        <div id="listaSv" class="lista-cards"></div>
+    </div>
+
+    <!-- AGENDAMENTOS -->
+    <div class="pagina" id="paginaAg">
+        <h2>Agendamentos Recebidos</h2>
+        <div id="listaAg" class="lista-cards"></div>
+    </div>
+
+    <!-- AVALIAÇÕES -->
+    <div class="pagina" id="paginaAvaliacoes">
+        <h2>Avaliações das Clientes</h2>
+        <div id="listaAval" class="lista-cards"></div>
+    </div>
+
+    <!-- CONFIGURAÇÕES -->
+    <div class="pagina" id="paginaConfig">
+        <h2>Configurações de Atendimento</h2>
+        <form id="formConfig" class="form-config">
+            <div class="grupo-campo">
+                <label>Horário de início</label>
+                <input type="time" id="horarioInicio" value="09:00">
+            </div>
+            <div class="grupo-campo">
+                <label>Horário de término</label>
+                <input type="time" id="horarioFim" value="17:00">
+            </div>
+            <div class="grupo-campo">
+                <label>Dias bloqueados (feriados, separar por vírgula)</label>
+                <input type="text" id="diasBloqueados" placeholder="Ex: 2026-12-25, 2027-01-01">
+            </div>
+            <button type="submit" class="botao-salvar">Salvar Alterações</button>
+        </form>
+    </div>
+
+</main>
+
+<!-- MODAL SERVIÇO -->
+<div id="modalSv" class="modal-fundo">
+    <div class="modal-janela">
+        <span class="modal-fechar">&times;</span>
+        <h3 id="tituloModalSv">Novo Serviço</h3>
+        <form id="formSv">
+            <input type="hidden" id="idSv">
+            <div class="grupo-campo">
+                <label>Nome do serviço</label>
+                <input type="text" id="nomeSv" required>
+            </div>
+            <div class="grupo-campo">
+                <label>Preço (R$)</label>
+                <input type="number" step="0.01" id="precoSv" required>
+            </div>
+            <button type="submit" class="botao-salvar">Salvar</button>
+        </form>
+    </div>
+</div>
+
+<!-- MODAL AVALIAÇÃO -->
+<div id="modalAval" class="modal-fundo">
+    <div class="modal-janela">
+        <span class="modal-fechar">&times;</span>
+        <h3>Editar Avaliação</h3>
+        <form id="formAval">
+            <input type="hidden" id="idAval">
+            <div class="grupo-campo">
+                <label>Nome</label>
+                <input type="text" id="nomeAvalEditar" required>
+            </div>
+            <div class="grupo-campo">
+                <label>Nota (1 a 5)</label>
+                <input type="number" id="notaAvalEditar" min="1" max="5" required>
+            </div>
+            <div class="grupo-campo">
+                <label>Comentário</label>
+                <textarea id="textoAvalEditar" maxlength="500" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="botao-salvar">Salvar</button>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="js/painel.js"></script>
+<!-- PROTEÇÃO DE LOGIN -->
+<script>
+if (localStorage.getItem("logado") !== "sim") {
+    location.href = "login.html";
+}
+</script>
+
+<script type="module" src="js/painel.js"></script>
+</body>
+</html>
+

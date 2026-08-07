@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio Afro Glow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="imagens/logo.png" alt="Logo Estúdio Afro Glow">
+        </a>
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <a href="agendamento.html" class="btn-menu">Agendar Agora</a>
+    </nav>
+</header>
+
+<section id="banner">
+    <div class="texto-banner">
+        <span class="destaque">Estúdio Afro Glow</span>
+        <h2>Tranças que <br>realçam sua <br>essência.</h2>
+        <p>Trabalho com French Curl, Boho Braids e Box Braids. Cada trança é feita com muita dedicação, carinho e cuidado para valorizar ainda mais a sua beleza</p>
+        <div class="botoes">
+            <a href="agendamento.html" class="botao">Agendar Agora</a>
+            <a href="galeria.html" class="botao-secundario">Ver Galeria</a>
+        </div>
+    </div>
+    <div class="imagem-banner">
+        <img src="imagens/banner.png" alt="Banner Afro Glow">
+    </div>
+</section>
+
+<section id="sobre">
+    <h2>Sobre o Estúdio</h2>
+    <p>O Estúdio Afro Glow nasceu para valorizar a beleza de cada cliente, oferecendo um atendimento personalizado e tranças feitas com carinho, dedicação e qualidade.</p>
+</section>
+
+<!-- 💬 ASSISTENTE DE DÚVIDAS — BOTÃO EM DESTAQUE -->
+<a href="ia-duvidas.html" class="botao-assistente">
+    <span class="icone">💬</span>
+    <div>
+        <strong>Tem dúvidas sobre tranças?</strong>
+        <small>Clique aqui e converse com nossa assistente 🤖</small>
+    </div>
+</a>
+
+<style>
+.botao-assistente {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #D4AF37, #b8860b);
+    color: #000 !important;
+    padding: 18px 25px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 25px 0;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+}
+.botao-assistente:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+    background: #fff;
+}
+.botao-assistente .icone {
+    font-size: 32px;
+    animation: pulsar 2s infinite;
+}
+@keyframes pulsar {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+.botao-assistente strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+.botao-assistente small {
+    font-size: 13px;
+    opacity: 0.85;
+}
+</style>
+
+<!-- ================= SERVIÇOS AGORA VEM DIRETO DO PAINEL ================= -->
+<section id="servicos">
+    <div class="titulo">
+        <span>Nossos Serviços</span>
+        <h2>Escolha sua próxima transformação</h2>
+    </div>
+
+    <div id="listaServicosHome" class="cards">
+        <p>Carregando serviços...</p>
+    </div>
+</section>
+
+</div> <!-- fim dos cartões -->
+
+<p class="aviso-valores">
+    💡 Os valores são referentes ao tamanho médio. O valor final pode variar conforme o comprimento e volume do cabelo.
+</p>
+
+</section>
+
+<section id="diferenciais">
+    <div class="titulo">
+        <span>Por que nos escolher?</span>
+        <h2>Uma experiência feita para você</h2>
+    </div>
+    <div class="diferenciais-grid">
+        <div class="diferencial">
+            <div class="icone">💛</div>
+            <h3>Atendimento Personalizado</h3>
+            <p>Cada cliente recebe atenção exclusiva para escolher o estilo ideal.</p>
+        </div>
+        <div class="diferencial">
+            <div class="icone">✨</div>
+            <h3>Materiais de Qualidade</h3>
+            <p>Utilizamos materiais de qualidade para garantir conforto e durabilidade.</p>
+        </div>
+        <div class="diferencial">
+            <div class="icone">💇🏾‍♀️</div>
+            <h3>Especialização</h3>
+            <p>Tranças feitas com técnica, cuidado e acabamento impecável.</p>
+        </div>
+        <div class="diferencial">
+            <div class="icone">📅</div>
+            <h3>Agendamento Fácil</h3>
+            <p>Marque seu horário de forma rápida e prática pelo site.</p>
+        </div>
+    </div>
+</section>
+
+<section id="agendamento">
+    <h2>Agende seu horário</h2>
+    <p>Escolha o melhor dia e horário para transformar seu visual.</p>
+    <a href="agendamento.html" class="botao">Agendar Agora</a>
+</section>
+
+<section id="cta">
+    <div class="cta-container">
+        <span>Estúdio Afro Glow</span>
+        <h2>Pronta para transformar seu visual?</h2>
+        <p>Agende seu horário de forma rápida e segura. Escolha o serviço desejado e reserve seu atendimento.</p>
+        <a href="agendamento.html" class="botao">Agendar Agora</a>
+    </div>
+</section>
+
+<!-- ================= AVALIAÇÕES DAS CLIENTES ================= -->
+<section id="avaliacoes">
+    <div class="titulo">
+        <span>O que dizem</span>
+        <h2>Avaliações</h2>
+    </div>
+
+    <div id="listaAvaliacoes" class="grade-avaliacoes">
+        <p>Carregando avaliações...</p>
+    </div>
+
+    <div class="form-avaliacao">
+        <h3>Deixe sua avaliação ✨</h3>
+        <form id="formAvaliacao">
+            <div class="campo">
+                <label>Seu nome</label>
+                <input type="text" id="nomeAvalia" required>
+            </div>
+
+            <div class="campo">
+                <label>Nota</label>
+                <div class="estrelas">
+                    <span class="estrela" data-nota="5">⭐</span>
+                    <span class="estrela" data-nota="4">⭐</span>
+                    <span class="estrela" data-nota="3">⭐</span>
+                    <span class="estrela" data-nota="2">⭐</span>
+                    <span class="estrela" data-nota="1">⭐</span>
+                </div>
+                <input type="hidden" id="notaAvalia" value="5" required>
+            </div>
+
+            <div class="campo">
+                <label>Seu depoimento (máximo 500 caracteres)</label>
+                <textarea id="textoAvalia" maxlength="500" rows="4" required placeholder="Conte como foi sua experiência..."></textarea>
+                <span class="contador">0 / 500</span>
+            </div>
+
+            <button type="submit" class="botao">Enviar Avaliação</button>
+        </form>
+    </div>
+</section>
+
+<!-- ================= CONTATO E ATENDIMENTO ================= -->
+<section id="contato">
+    <div class="titulo">
+        <span>Contato</span>
+        <h2>Como nos encontrar</h2>
+    </div>
+
+    <div class="info-contato">
+        <div class="item-contato">
+            <span class="icone">📞</span>
+            <div>
+                <h3>WhatsApp</h3>
+                <p>(33) 98852-0320</p>
+            </div>
+        </div>
+
+        <div class="item-contato">
+            <span class="icone">📍</span>
+            <div>
+                <h3>Atendimento</h3>
+                <p> Ataleia - MG </p>
+            </div>
+        </div>
+
+        <div class="item-contato">
+            <span class="icone">⏰</span>
+            <div>
+                <h3>Horário de Atendimento</h3>
+                <p>Segunda a Sexta: 09h às 17h</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Estúdio Afro Glow - Todos os direitos reservados.</p>
+</footer>
+
+<script type="module" src="js/index.js"></script>
+<a href="painel.html" class="botao">Painel ADM</a>
+
+<script type="module" src="js/avaliacoes.js"></script>
+
+<a href="ia-duvidas.html">💬 Dúvidas sobre Tranças</a>
+
+<!-- 💬 BOTÃO FLUTUANTE DA ASSISTENTE -->
+<a href="ia-duvidas.html" class="botao-flutuante">
+    💬 Dúvidas?
+</a>
+
+<style>
+.botao-flutuante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #D4AF37, #b8860b);
+    color: #000 !important;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.45);
+    z-index: 999;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+    animation: balancar 2.5s infinite;
+}
+.botao-flutuante:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+}
+@keyframes balancar {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dúvidas sobre Tranças | Estúdio Afro Glow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #D4AF37;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .caixa-chat {
+            background: #111;
+            border: 2px solid rgba(212,175,55,0.4);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .area-mensagens {
+            height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding-right: 10px;
+        }
+        .area-mensagens::-webkit-scrollbar {
+            width: 6px;
+        }
+        .area-mensagens::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 3px;
+        }
+        .mensagem {
+            margin-bottom: 18px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            line-height: 1.6;
+            font-size: 0.98rem;
+            max-width: 90%;
+        }
+        .mensagem.ia {
+            background: rgba(212,175,55,0.15);
+            border-left: 3px solid #D4AF37;
+            color: #fff;
+        }
+        .mensagem.cliente {
+            background: #222;
+            border-right: 3px solid #D4AF37;
+            margin-left: auto;
+            color: #fff;
+        }
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+        #pergunta {
+            flex: 1;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            background: #1c1c1c;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+        }
+        #pergunta:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+        }
+        #btnEnviar {
+            padding: 14px 25px;
+            background: linear-gradient(135deg, #D4AF37, #b8860b);
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #btnEnviar:hover {
+            transform: translateY(-2px);
+            background: #fff;
+        }
+        .perguntas-rapidas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn-pergunta {
+            padding: 8px 14px;
+            background: #222;
+            color: #D4AF37;
+            border: 1px solid #D4AF37;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-pergunta:hover {
+            background: #D4AF37;
+            color: #000;
+        }
+        .voltar {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .voltar:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💇 Dúvidas sobre Tranças</h1>
+    <div class="caixa-chat">
+        <div class="area-mensagens" id="areaMensagens">
+            <div class="mensagem ia">
+                👋 Olá! Eu sou a assistente do Estúdio Afro Glow! 💛<br><br>
+                Posso te ajudar com dúvidas sobre tranças, tipos, preços, tempo de duração e cuidados. É só perguntar ou escolher uma das opções abaixo!
+            </div>
+        </div>
+
+        <div class="perguntas-rapidas">
+            <button class="btn-pergunta" onclick="perguntar('Quais tipos de tranças você faz?')">Tipos de tranças</button>
+            <button class="btn-pergunta" onclick="perguntar('Quanto tempo dura?')">Duração</button>
+            <button class="btn-pergunta" onclick="perguntar('Como devo preparar o cabelo?')">Preparo do cabelo</button>
+            <button class="btn-pergunta" onclick="perguntar('Como cuidar depois de pronta?')">Cuidados</button>
+            <button class="btn-pergunta" onclick="perguntar('Quanto custa cada trança?')">Preços</button>
+            <button class="btn-pergunta" onclick="perguntar('Quanto tempo leva para fazer?')">Tempo de serviço</button>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="pergunta" placeholder="Escreva sua dúvida aqui...">
+            <button id="btnEnviar">Enviar</button>
+        </div>
+    </div>
+
+    <a href="index.html" class="voltar">⬅ Voltar para a página principal</a>
+</div>
+
+<script>
+// ===== RESPOSTAS EXATAMENTE COMO VOCÊ PEDIU =====
+const respostas = [
+    {
+        palavras: ["tipo", "tipos", "quais tranças", "tranças disponíveis", "fazem", "oferecem", "estilos"],
+        resposta: "💛 Trabalho com esses 3 estilos lindos:\n\n✅ Box Braids\n✅ Boho Braids\n✅ French Curl\n\nSão esses os que faço com todo carinho e dedicação! 💇✨"
+    },
+    {
+        palavras: ["dura", "duração", "quanto tempo dura", "tempo dura", "quanto tempo fica"],
+        resposta: "⏰ A duração média dos meus estilos é:\n\n✅ Box Braids: de 6 a 8 semanas\n✅ Boho Braids: de 6 a 8 semanas\n✅ French Curl: de 5 a 7 semanas\n\nCom os cuidados certos pode durar até mais tempo! 😉"
+    },
+    {
+        palavras: ["preço", "custa", "quanto custa", "valor", "preços", "quanto fica", "preco"],
+        resposta: "💰 Os valores dos meus serviços:\n\n✅ Box Braids: R$ 180\n✅ Boho Braids: R$ 180\n✅ French Curl: R$ 180\n\nTodos os valores já incluem todo o cuidado e qualidade que você merece! 💛"
+    },
+    {
+        palavras: ["tempo", "quanto tempo leva", "demora", "horas", "quanto tempo demora", "serviço"],
+        resposta: "⏳ O tempo pode variar um pouco conforme o tamanho e volume do cabelo:\n\n✅ Box Braids: cerca de 4 a 5 horas\n✅ French Curl: cerca de 5 horas\n✅ Boho Braids: cerca de 6 horas\n\nAgende com antecedência para garantir seu horário! 💛"
+    },
+    {
+        palavras: ["lavar", "antes", "preparo", "preparar", "preciso lavar", "cabelo limpo", "chegar", "creme", "óleo", "produtos"],
+        resposta: "🧼 Regra essencial:\n\n✅ Cabelo bem lavado e totalmente seco\n✅ SEM cremes, sem óleos e sem produtos pesados\n✅ Desembaraçado\n\nIsso faz toda diferença para o resultado ficar perfeito! 💛"
+    },
+    {
+        palavras: ["cuidar", "cuidados", "depois", "manter", "como cuidar", "dicas", "molhar"],
+        resposta: "✨ Cuidados importantes:\n\n✅ Nos primeiros 3 dias evite molhar muito as tranças\n✅ Durma com touca de cetim ou fronha de cetim\n✅ Lave com xampu sem sal ou sabão neutro, de 15 em 15 dias\n✅ Não use cremes pesados na raiz\n✅ Hidrate apenas a ponta do seu cabelo natural\n✅ Se soltar alguma, volte para ajustar! 💛"
+    },
+    {
+        palavras: ["agendar", "agendamento", "marcar", "horário", "marcar horário", "feriados", "sábado", "domingo"],
+        resposta: "📅 Para agendar:\n\n✅ Clique em 'Agendar Atendimento' no site\n✅ Ou envie mensagem no WhatsApp\n\n⚠️ Não trabalho aos sábados, domingos e feriados! 💛"
+    },
+    {
+        palavras: ["ola", "olá", "oi", "bom dia", "boa tarde", "boa noite"],
+        resposta: "👋 Olá! Tudo bem? 💛\n\nSou sua assistente virtual do Estúdio Afro Glow! Estou aqui para tirar suas dúvidas sobre Box Braids, Boho Braids e French Curl. Pergunte à vontade! 💇"
+    }
+];
+
+const respostaPadrao = "🤔 Desculpa, não entendi direito! 😅\n\nPergunte sobre:\n✅ Tipos de tranças\n✅ Preços\n✅ Tempo de duração\n✅ Tempo de serviço\n✅ Preparo do cabelo\n✅ Cuidados depois\n\nEstou aqui pra ajudar! 💛";
+
+function buscarResposta(pergunta) {
+    const texto = pergunta.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    for (const item of respostas) {
+        for (const palavra of item.palavras) {
+            const p = palavra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            if (texto.includes(p)) {
+                return item.resposta;
+            }
+        }
+    }
+    return respostaPadrao;
+}
+
+function adicionarMensagem(texto, ehCliente) {
+    const area = document.getElementById("areaMensagens");
+    const div = document.createElement("div");
+    div.className = `mensagem ${ehCliente ? 'cliente' : 'ia'}`;
+    div.innerHTML = texto.replace(/\n/g, "<br>");
+    area.appendChild(div);
+    area.scrollTop = area.scrollHeight;
+}
+
+function perguntar(texto) {
+    document.getElementById("pergunta").value = texto;
+    enviarPergunta();
+}
+
+function enviarPergunta() {
+    const campo = document.getElementById("pergunta");
+    const pergunta = campo.value.trim();
+    if (!pergunta) return;
+
+    adicionarMensagem(pergunta, true);
+    campo.value = "";
+
+    setTimeout(() => {
+        const resposta = buscarResposta(pergunta);
+        adicionarMensagem(resposta, false);
+    }, 600);
+}
+
+document.getElementById("btnEnviar").onclick = enviarPergunta;
+document.getElementById("pergunta").addEventListener("keypress", e => {
+    if (e.key === "Enter") enviarPergunta();
+});
+</script>
+
+</body>
+</html>

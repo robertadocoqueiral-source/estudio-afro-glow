@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento | Estúdio Afro Glow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="imagens/logo.png" alt="Logo">
+        </a>
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="agendamento-form">
+    <div class="progresso">
+        <div class="etapa" id="etapa1">
+            <span>1</span>
+            <p>Dados</p>
+        </div>
+        <div class="linha-progresso"></div>
+        <div class="etapa" id="etapa2">
+            <span>2</span>
+            <p>Serviço</p>
+        </div>
+        <div class="linha-progresso"></div>
+        <div class="etapa" id="etapa3">
+            <span>3</span>
+            <p>Data</p>
+        </div>
+        <div class="linha-progresso"></div>
+        <div class="etapa" id="etapa4">
+            <span>4</span>
+            <p>Confirmar</p>
+        </div>
+    </div>
+
+    <div class="titulo">
+        <span>Agendamento</span>
+        <h2>Reserve seu horário</h2>
+    </div>
+
+    <form id="formAgendamento">
+        <div class="campo">
+            <label>Nome completo</label>
+            <input type="text" id="nome" required>
+        </div>
+
+        <div class="campo">
+            <label>WhatsApp</label>
+            <input type="tel" id="telefone" placeholder="(XX) 9XXXX-XXXX" required>
+        </div>
+
+        <div class="campo">
+            <label>Tipo de Trança</label>
+            <select id="servico" required>
+                <option value="">Carregando serviços...</option>
+            </select>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Data</label>
+                <input type="date" id="data" required>
+                <!-- ✅ MENSAGEM ADICIONADA AQUI -->
+                <p class="aviso-data">📢 Não atendemos aos sábados, domingos e feriados.</p>
+            </div>
+
+            <div class="campo">
+                <label>Escolha um horário</label>
+                <div class="horarios">
+                    <button type="button" class="hora" data-hora="09:00">09:00</button>
+                    <button type="button" class="hora" data-hora="10:00">10:00</button>
+                    <button type="button" class="hora" data-hora="11:00">11:00</button>
+                    <button type="button" class="hora" data-hora="13:00">13:00</button>
+                    <button type="button" class="hora" data-hora="14:00">14:00</button>
+                    <button type="button" class="hora" data-hora="15:00">15:00</button>
+                    <button type="button" class="hora" data-hora="16:00">16:00</button>
+                    <button type="button" class="hora" data-hora="17:00">17:00</button>
+                </div>
+                <input type="hidden" id="hora" required>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Observações</label>
+            <textarea id="obs" rows="5"></textarea>
+        </div>
+
+        <div class="resumo">
+            <h3>📋 Resumo do Agendamento</h3>
+            <p><strong>Nome:</strong> <span id="resNome">-</span></p>
+            <p><strong>WhatsApp:</strong> <span id="resTelefone">-</span></p>
+            <p><strong>Serviço:</strong> <span id="resServico">-</span></p>
+            <p><strong>Data:</strong> <span id="resData">-</span></p>
+            <p><strong>Horário:</strong> <span id="resHora">-</span></p>
+        </div>
+
+        <button class="botao" type="submit">Solicitar Agendamento</button>
+    </form>
+</section>
+
+<script type="module" src="js/agendamento.js"></script>
+
+<div id="mensagem-sucesso" class="popup">
+    <div class="popup-box">
+        <h2>📲 WhatsApp aberto!</h2>
+        <p>Confira a mensagem que foi aberta no WhatsApp e clique em <strong>Enviar</strong>. Depois disso, entraremos em contato para confirmar seu horário.</p>
+        <button id="fecharPopup" class="botao">Fechar</button>
+    </div>
+</div>
+
+<a href="https://wa.me/5533988520320" class="whatsapp-fixo" target="_blank" aria-label="Falar no WhatsApp">
+    <img src="icones/whatsapp.png" alt="WhatsApp">
+</a>
+
+</body>
+</html>

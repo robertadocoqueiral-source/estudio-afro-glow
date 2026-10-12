@@ -1,0 +1,129 @@
+/* ========================= */
+/* AJUSTES EXTRAS PARA CELULAR E TELAS MENORES */
+/* ========================= */
+
+@media (max-width: 992px) {
+    .conteudo {
+        margin-left: 0;
+        padding: 25px 15px;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #D4AF37;
+    }
+
+    .painel {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .texto-banner h2 {
+        font-size: 42px;
+    }
+
+    .texto-banner p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .botoes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+    }
+
+    .horarios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-container {
+        padding: 40px 25px;
+    }
+
+    .cta-container h2 {
+        font-size: 34px;
+    }
+
+    .progresso {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .linha-progresso {
+        display: none;
+    }
+
+    .popup-box {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-banner h2 {
+        font-size: 32px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .botoes,
+    .botao,
+    .botao-secundario {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cards-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-fixo {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+}

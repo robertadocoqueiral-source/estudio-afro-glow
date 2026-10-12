@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111111;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.caixa-login {
+    background: #1c1c1c;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 2px solid #D4AF37;
+    width: 90%;
+    max-width: 400px;
+}
+
+.caixa-login h2 {
+    color: #D4AF37;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.caixa-login input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    background: #222222;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.caixa-login input:focus {
+    border-color: #D4AF37;
+}
+
+.caixa-login input::placeholder {
+    color: #888888;
+}
+
+.caixa-login button {
+    width: 100%;
+    padding: 14px;
+    background: #D4AF37;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.caixa-login button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+#erro {
+    color: #ff4d4d;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+    font-size: 14px;
+}
+
+#btnVoltar {
+    background: #333;
+    color: white;
+}
+
+#btnVoltar:hover {
+    background: #444;
+    transform: translateY(-2px);
+}

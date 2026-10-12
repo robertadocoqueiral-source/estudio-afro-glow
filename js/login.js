@@ -1,6 +1,6 @@
 // ===== AQUI VOCÊ ALTERA SEU E-MAIL E SENHA =====
 const EMAIL_CERTO = "robertadocoqueiral@gmail.com";  // ← coloque seu e-mail
-const SENHA_CERTA = "4002";                 // ← coloque sua senha
+const SENHA_CERTA = "";                 // ← coloque sua senha
 // ===============================================
 
 // Se já estiver logado, vai direto pro painel
